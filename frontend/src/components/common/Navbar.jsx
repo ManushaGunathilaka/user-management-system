@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserService from "../service/UserService";
 
-const Navbar = () => {
+function Navbar() {
+  const navigate = useNavigate();
   const isAuthenticated = UserService.isAuthenticated();
   const isAdmin = UserService.isAdmin();
 
@@ -12,6 +13,8 @@ const Navbar = () => {
     );
     if (confirmDelete) {
       UserService.logout();
+      navigate("/"); // Redirect to the login page (assuming "/" is the login route)
+      window.location.reload(); // Refresh the page after logout
     }
   };
 
@@ -20,7 +23,7 @@ const Navbar = () => {
       <ul>
         {!isAuthenticated && (
           <li>
-            <Link to="/">Phegon Dev</Link>
+            <Link to="/">Manu's User Management System</Link>
           </li>
         )}
         {isAuthenticated && (
@@ -43,6 +46,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
