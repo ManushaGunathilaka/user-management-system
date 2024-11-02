@@ -63,15 +63,17 @@ function UserManagementPage() {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                <button
-                  className="delete-button"
-                  onClick={() => deleteUser(user.id)}
-                >
-                  Delete
-                </button>
-                <button>
-                  <Link to={`/update-user/${user.id}`}>Update</Link>
-                </button>
+                <div className="button-container">
+                  <button
+                    className="delete-button"
+                    onClick={() => deleteUser(user.id)}
+                  >
+                    Delete
+                  </button>
+                  <button>
+                    <Link to={`/update-user/${user.id}`}>Update</Link>
+                  </button>
+                </div>
               </td>
             </tr>
           ))}

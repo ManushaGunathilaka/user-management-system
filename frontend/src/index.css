@@ -49,7 +49,7 @@ a {
   transition: background-color 0.3s ease;
 }
 
-a:hover {
+nav a:hover {
   background-color: #495057;
 }
 
@@ -231,10 +231,15 @@ button {
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-1px);
 }
 
 .delete-button {
   background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #b33642;
 }
 
 .reg-button {
@@ -278,4 +283,10 @@ button:hover {
 
 .profile-page-container button:hover {
   background-color: #0056b3;
+}
+
+.button-container {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Adjust the gap between buttons */
 }
