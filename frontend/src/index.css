@@ -1,35 +1,44 @@
-/* NAVBAR STYLING */
-
+/* GENERAL RESET AND STYLING */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR STYLING */
 .link-button {
-  background-color: blue;
-  color: white;
+  background-color: #007bff;
+  color: #fff;
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 nav {
-  background-color: #333;
-  padding: 10px 0;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 600;
+  background-color: #343a40;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 li {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 a {
@@ -41,33 +50,39 @@ a {
 }
 
 a:hover {
-  background-color: #555;
+  background-color: #495057;
 }
 
 @media only screen and (max-width: 600px) {
   nav {
-    padding: 5px 0;
+    padding: 10px 0;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
   }
 
   li {
-    display: block;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }
 
-/* LOGIN STYLLING */
-/* index.css */
+/* AUTHENTICATION CONTAINER STYLING */
 .auth-container {
   max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin-top: 0;
+.auth-container h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .form-group {
@@ -75,104 +90,49 @@ h2 {
 }
 
 label {
-  display: block;
-  font-weight: bold;
+  font-weight: 600;
 }
 
+input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-@media only screen and (max-width: 600px) {
-  .auth-container {
-    padding: 10px;
-  }
-
-  input[type="email"],
-  input[type="password"],
-  button {
-    padding: 8px;
-  }
-}
-
-/* REGISTRATION STYLLING */
-/* + */
-/* update user */
-
-.auth-container {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.auth-container h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
+  margin-top: 5px;
 }
 
 button[type="submit"] {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
+  width: 100%;
+  padding: 12px;
   background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
-  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* FOOTER STYKLING */
+@media only screen and (max-width: 600px) {
+  .auth-container {
+    padding: 15px;
+  }
+
+  input,
+  button[type="submit"] {
+    padding: 10px;
+  }
+}
+
+/* FOOTER STYLING */
 .footer {
-  background-color: black;
-  color: white;
+  background-color: #343a40;
+  color: #fff;
   padding: 20px;
   text-align: center;
   position: fixed;
@@ -181,72 +141,82 @@ button[type="submit"]:hover {
 }
 
 /* PAGE NOT FOUND STYLING */
-/* index.css */
 .not-found-container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
   text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #d9534f;
+.not-found-container h2 {
+  color: #dc3545;
+  margin-bottom: 10px;
 }
 
-p {
+.not-found-container p {
   color: #333;
 }
 
 @media only screen and (max-width: 600px) {
   .not-found-container {
-    padding: 10px;
+    padding: 15px;
   }
 }
 
-/* ERROR STYLING */
+/* ERROR MESSAGE STYLING */
 .error-message {
-  color: red;
+  color: #dc3545;
   text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-/*USER MANAGEMENT PAGE*/
+/* USER MANAGEMENT PAGE */
 .user-management-container {
   max-width: 800px;
-  margin: 0px auto 60px auto;
+  margin: 20px auto;
   padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.user-management-container h2 {
   text-align: center;
-  margin-bottom: 30px;
   color: #333;
+  margin-bottom: 20px;
+  font-size: 26px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 15px;
 }
 
 th,
 td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
   text-align: left;
 }
 
 th {
   background-color: #f2f2f2;
+  font-weight: 600;
 }
 
 tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #fafafa;
 }
 
 tr:hover {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
 }
 
 button {
@@ -256,11 +226,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.reg-button {
-  padding: 15px;
-  margin: 10px auto;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -268,28 +234,30 @@ button:hover {
 }
 
 .delete-button {
-  background-color: rgb(255, 9, 9);
-  color: white;
-  margin-bottom: 10px;
-  font-weight: 400;
+  background-color: #dc3545;
 }
 
-/**PROFILE STYLING"
-  /* index.css */
+.reg-button {
+  padding: 15px;
+  margin: 10px auto;
+  background-color: #28a745;
+}
 
+/* PROFILE PAGE */
 .profile-page-container {
   max-width: 600px;
   margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-page-container h2 {
+  color: #333;
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
 }
 
 .profile-page-container p {
@@ -298,16 +266,16 @@ button:hover {
 }
 
 .profile-page-container button {
-  padding: 10px 20px;
+  padding: 12px;
   margin-right: 10px;
-  border: none;
-  border-radius: 3px;
   background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .profile-page-container button:hover {
-  background-color: #093c72;
+  background-color: #0056b3;
 }
